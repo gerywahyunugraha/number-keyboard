@@ -31,6 +31,8 @@ class NumberKeyboard : ConstraintLayout {
     @ColorRes
     private var numberKeyTextColor: Int = 0
     private var numberKeyTypeface: Typeface? = null
+    @Dimension
+    private var numberKeyTextSize: Float = 0.0F
     @DrawableRes
     private var leftAuxBtnIcon: Int = 0
     @DrawableRes
@@ -213,6 +215,8 @@ class NumberKeyboard : ConstraintLayout {
                 val fontId = array.getResourceId(R.styleable.NumberKeyboard_numberkeyboard_numberKeyTypeface, -1)
                 numberKeyTypeface = ResourcesCompat.getFont(context, fontId)
             }
+            numberKeyTextSize = array.getDimension(R.styleable.NumberKeyboard_numberkeyboard_numberKeyTextSize,
+                    DEFAULT_KEY_TEXT_SIZE_SP)
             // Get auxiliary icons
             when (type) {
                 0 -> { // integer
@@ -332,6 +336,7 @@ class NumberKeyboard : ConstraintLayout {
         private const val DEFAULT_KEY_WIDTH_DP = -1 // match_parent
         private const val DEFAULT_KEY_HEIGHT_DP = -1 // match_parent
         private const val DEFAULT_KEY_PADDING_DP = 16
+        private const val DEFAULT_KEY_TEXT_SIZE_SP = 18.0F
 
         init {
             AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
