@@ -1,5 +1,7 @@
 # Number Keyboard  [![](https://jitpack.io/v/davidmigloz/number-keyboard.svg)](https://jitpack.io/#davidmigloz/number-keyboard)
 
+This repository is a fork from [davidmigloz/number-keyboard](https://github.com/davidmigloz/number-keyboard). It adds the ability to change the font for the keyboard.
+
 Android library that provides a number keyboard view.
 
 ![screenshot](img/screenshot.jpg)
